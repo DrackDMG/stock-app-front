@@ -12,7 +12,7 @@ function Create() {
     }
     const handleClick = (e) => {
         e.preventDefault()
-        fetch('http://localhost:5000/api/v1/prod', {
+        fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/prod`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
